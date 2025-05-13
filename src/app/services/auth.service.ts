@@ -1,9 +1,9 @@
-// auth.service.ts
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { API_BASE_URL } from '../tokens/api-base-url.token';
 import { Observable, tap } from 'rxjs';
 import { setUserPayload } from '../core/stores/user.store';
+import { setToken, clearToken } from '../core/stores/auth.store';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -13,24 +13,18 @@ export class AuthService {
   login(username: string, password: string): Observable<any> {
     return this.http.post(`${this.baseURL}/donpollo/auth/signin`, { username, password }).pipe(
       tap((response: any) => {
-        localStorage.setItem('token', response.token);
-
+        setToken(response.token); // ✅ reemplaza localStorage.setItem
         const payloadBase64 = response.token.split('.')[1];
         const payloadDecoded = this.decodeBase64_UTF_8(payloadBase64);
         const payload = JSON.parse(payloadDecoded);
-
-        setUserPayload(payload); // 💥 Aquí actualizas el signal
+        setUserPayload(payload);
       })
     );
   }
 
   logout() {
-    localStorage.removeItem('token');
-    setUserPayload(null); // 💥 Aquí lo limpias del signal
-  }
-
-  getToken(): string | null {
-    return localStorage.getItem('token');
+    clearToken();        // ✅ reemplaza localStorage.removeItem
+    setUserPayload(null);
   }
 
   decodeBase64_UTF_8(base64: string): string {
