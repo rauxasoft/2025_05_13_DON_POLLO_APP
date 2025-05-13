@@ -1,20 +1,29 @@
-<h1>App Borrame</h1>
-<nav>
-    <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/familias">Familias</a></li>
-        <li><a routerLink="/login">Login</a></li>
+<header>
+  <h1>🐔 App Don Pollo</h1>
+
+  <nav>
+    <ul class="nav-menu">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/familias">Familias</a></li>
+      <li><a routerLink="/login">Login</a></li>
     </ul>
-</nav>
-<p>version {{appVersion}}</p>
+  </nav>
 
-@if(nombre) {
-    <p>Bienvenido {{nombre}}!</p>
-    <button (click)="logout()">Cerrar sesión</button>
-}
-@for(role of roles; track role) {
-      <li>{{role}}</li>  
-}
+  <p class="version">Versión {{ appVersion }}</p>
 
-<hr>    
-<router-outlet />
+  @if(nombre) {
+    <div class="usuario">
+      <p><strong>Bienvenido, {{ nombre }}!</strong></p>
+      <ul class="roles">
+        @for (role of roles; track role) {
+          <li>{{ role }}</li>
+        }
+      </ul>
+      <button (click)="logout()">Cerrar sesión</button>
+    </div>
+  }
+</header>
+
+<main>
+  <router-outlet />
+</main>
