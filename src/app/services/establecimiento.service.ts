@@ -1,19 +1,19 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
-import { Familia } from "../model/familia";
-import { Observable } from "rxjs";
 import { API_BASE_URL } from "../tokens/api-base-url.token";
+import { Observable } from "rxjs";
+import { EstablecimientoDTO2 } from "../model/establecimientoDTO2";
 
 @Injectable({providedIn: 'root'})
-export class FamiliaService {
+
+export class EstablecimientoService {
 
     private http = inject(HttpClient);
     private baseURL = inject(API_BASE_URL);
 
-    getFamilias(): Observable<Familia[]> {
+    getAll(): Observable<EstablecimientoDTO2[]> {
 
         console.log(`${this.baseURL}/familias`);
-        return this.http.get<Familia[]>(`${this.baseURL}/familias`);
+        return this.http.get<EstablecimientoDTO2[]>(`${this.baseURL}/establecimientos?view=DTO2`);
     }
-
 }
