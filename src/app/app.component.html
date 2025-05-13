@@ -1,0 +1,17 @@
+<h1>App Borrame</h1>
+<p>version {{appVersion}}</p>
+@if(nombre) {
+    <p>Bienvenido {{nombre}}!</p>  
+}
+@for(role of roles; track role) {
+      <li>{{role}}</li>  
+}
+<nav>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/familias">Familias</a></li>
+        <li><a routerLink="/login">Login</a></li>
+    </ul>
+</nav>
+<hr>    
+<router-outlet />
