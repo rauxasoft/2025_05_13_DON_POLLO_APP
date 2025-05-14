@@ -5,8 +5,17 @@
     <ul class="nav-menu">
       <li><a routerLink="/">Home</a></li>
       <li><a routerLink="/familias">Familias</a></li>
-      <li><a routerLink="/establecimientos">Establecimientos</a></li>
-      <li><a routerLink="/login">Login</a></li>
+      
+      @if (roles?.includes('ADMIN')) {
+        <li><a routerLink="/establecimientos">Establecimientos</a></li>
+      }
+      @if (!nombre){
+        <li><a routerLink="/login">Login</a></li>
+      } @else() 
+      {
+        <button (click)="logout()">Cerrar sesión</button>
+      }
+      
     </ul>
   </nav>
 
@@ -20,7 +29,6 @@
           <li>{{ role }}</li>
         }
       </ul>
-      <button (click)="logout()">Cerrar sesión</button>
     </div>
   }
 </header>

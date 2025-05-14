@@ -1,0 +1,57 @@
+Listado de rutas de carpetas
+El número de serie del volumen es C4F9-2B32
+C:.
+¦   app.component.css
+¦   app.component.html
+¦   app.component.spec.ts
+¦   app.component.ts
+¦   app.config.ts
+¦   app.routes.ts
+¦   tree.txt
+¦   
++---components
+¦   +---home
+¦   ¦       home.component.css
+¦   ¦       home.component.html
+¦   ¦       home.component.spec.ts
+¦   ¦       home.component.ts
+¦   ¦       
+¦   +---listado-establecimientos
+¦   ¦       listado-establecimientos.component.css
+¦   ¦       listado-establecimientos.component.html
+¦   ¦       listado-establecimientos.component.spec.ts
+¦   ¦       listado-establecimientos.component.ts
+¦   ¦       
+¦   +---listado-familias
+¦   ¦       listado-familias.component.css
+¦   ¦       listado-familias.component.html
+¦   ¦       listado-familias.component.spec.ts
+¦   ¦       listado-familias.component.ts
+¦   ¦       
+¦   +---login
+¦           login.component.css
+¦           login.component.html
+¦           login.component.spec.ts
+¦           login.component.ts
+¦           
++---core
+¦   +---interceptors
+¦   ¦       auth.interceptor.ts
+¦   ¦       
+¦   +---stores
+¦           auth.store.ts
+¦           user.store.ts
+¦           
++---model
+¦       establecimientoDTO2.ts
+¦       familia.ts
+¦       
++---services
+¦       auth.service.ts
+¦       establecimiento.service.ts
+¦       familia.service.ts
+¦       
++---tokens
+        api-base-url.token.ts
+        app-version.token.ts
+        
