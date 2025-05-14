@@ -3,7 +3,7 @@ import { EstablecimientoDTO2 } from './establecimientoDTO2';
 import { EstablecimientoService } from './establecimiento.service';
 
 @Component({
-  selector: 'app-listado-familias',
+  selector: 'app-listado-establecimientos',
   standalone: true,
   imports: [],
   templateUrl: './listado-establecimientos.component.html',

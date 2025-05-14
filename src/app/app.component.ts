@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { APP_VERSION } from './tokens/app-version.token';
 import { userPayload } from './core/stores/user.store';
-import { AuthService } from './services/auth.service';
+import { AuthService } from './core/auth/auth.service';
 
 @Component({
   selector: 'app-root',

@@ -11,8 +11,6 @@ export class FamiliaService {
     private baseURL = inject(API_BASE_URL);
 
     getFamilias(): Observable<Familia[]> {
-
-        console.log(`${this.baseURL}/familias`);
         return this.http.get<Familia[]>(`${this.baseURL}/familias`);
     }
 

@@ -12,8 +12,6 @@ export class EstablecimientoService {
     private baseURL = inject(API_BASE_URL);
 
     getAll(): Observable<EstablecimientoDTO2[]> {
-
-        console.log(`${this.baseURL}/familias`);
         return this.http.get<EstablecimientoDTO2[]>(`${this.baseURL}/establecimientos?view=DTO2`);
     }
 }

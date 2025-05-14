@@ -1,9 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { API_BASE_URL } from '../tokens/api-base-url.token';
+import { API_BASE_URL } from '../../tokens/api-base-url.token';
 import { Observable, tap } from 'rxjs';
-import { setUserPayload } from '../core/stores/user.store';
-import { setToken, clearToken } from '../core/stores/auth.store';
+import { setUserPayload } from '../stores/user.store';
+import { setToken, clearToken } from './auth.store';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {

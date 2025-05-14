@@ -1,5 +1,5 @@
 import { HttpInterceptorFn } from '@angular/common/http';
-import { token } from '../stores/auth.store';
+import { token } from '../auth/auth.store';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authToken = token();
