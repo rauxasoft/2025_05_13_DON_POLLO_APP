@@ -1,8 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
-import { Familia } from "../model/familia";
+import { Familia } from "./familia";
 import { Observable } from "rxjs";
-import { API_BASE_URL } from "../tokens/api-base-url.token";
+import { API_BASE_URL } from "../../tokens/api-base-url.token";
 
 @Injectable({providedIn: 'root'})
 export class FamiliaService {

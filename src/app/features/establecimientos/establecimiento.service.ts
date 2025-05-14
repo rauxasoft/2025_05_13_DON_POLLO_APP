@@ -1,8 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
-import { API_BASE_URL } from "../tokens/api-base-url.token";
+import { API_BASE_URL } from "../../tokens/api-base-url.token";
 import { Observable } from "rxjs";
-import { EstablecimientoDTO2 } from "../model/establecimientoDTO2";
+import { EstablecimientoDTO2 } from "./establecimientoDTO2";
 
 @Injectable({providedIn: 'root'})
 

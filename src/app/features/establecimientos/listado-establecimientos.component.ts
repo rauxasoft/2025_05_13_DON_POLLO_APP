@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { EstablecimientoDTO2 } from '../../model/establecimientoDTO2';
-import { EstablecimientoService } from '../../services/establecimiento.service';
+import { EstablecimientoDTO2 } from './establecimientoDTO2';
+import { EstablecimientoService } from './establecimiento.service';
 
 @Component({
   selector: 'app-listado-familias',

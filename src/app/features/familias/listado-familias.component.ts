@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { FamiliaService } from '../../services/familia.service';
-import { Familia } from '../../model/familia';
+import { FamiliaService } from '../../features/familias/familia.service';
+import { Familia } from '../../features/familias/familia';
 
 @Component({
   selector: 'app-listado-familias',
