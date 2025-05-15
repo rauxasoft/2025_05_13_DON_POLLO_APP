@@ -7,8 +7,8 @@
       "i18n":{
         "sourceLocale":"en-US",
         "locales": {
-          "es-ES":"src/locale/messages.es.xlf",
-          "ca-ES":"src/locale/messages.ca.xlf"
+          "es":"src/locale/messages.es.xlf",
+          "ca":"src/locale/messages.ca.xlf"
         }
       },
       "projectType": "application",

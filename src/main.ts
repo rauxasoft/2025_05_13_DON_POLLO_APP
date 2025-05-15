@@ -1,5 +1,7 @@
 /// <reference types="@angular/localize" />
 
+// import '@angular/localize/init'; Esto no es necesario porque ya está en polyfills en angular.json
+
 // la triple barra es una directiva de TypeScript para incluir definiciones de tipos. Util para autocompletado.
 // pero no carga el código necesario para que $localize funcione.
 
