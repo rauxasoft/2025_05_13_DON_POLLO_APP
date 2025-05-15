@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "borrame": {
+    "donpollo_app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,7 +17,8 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -59,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "borrame:build:production"
+              "buildTarget": "donpollo_app:build:production"
             },
             "development": {
-              "buildTarget": "borrame:build:development"
+              "buildTarget": "donpollo_app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +76,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
